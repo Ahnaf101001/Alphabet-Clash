@@ -71,20 +71,23 @@
                 <!-- life and score -->
                 <div class="flex flex-row justify-between w-[1024px]">
                     <button class="btn bg-[#894189] rounded-full w-[120px] text-white border-none hover:bg-[#894189]">Life <i class='bx bxs-heart text-white'></i>
-                    <span>1</span>
+                    <span id="life">5</span>
                     </button>
                     <button class="btn bg-[#360490] rounded-full w-[120px] text-white border-none hover:bg-[#360490]">Score <i class='bx bxs-dollar-circle text-white'></i>
-                    <span>1</span>
+                    <span id="gainedScore">0</span>
                     </button>
                 </div>
             </div>
         </section>
 
-        <section id="end" class="score min-h-screen flex justify-center items-center hidden">
+        <section id="end" class="score min-h-screen flex flex-col justify-center items-center hidden">
+            <h1 class="text-9xl text-white font-extrabold">Game Over!!</h1>
+            <br>
+            <br>
             <div class="border-none h-[400px] w-[500px] flex flex-col justify-center rounded-2xl bg-[#FFFFFF33]">
                 <div class="flex flex-col justify-center items-center gap-[20px]">
-                    <h1 class="text-8xl text-white font-extrabold">Score: <span>4</span></h1>
-                    <button class="bg-white text-black h-[96px] w-[250px] text-5xl rounded-lg hover:bg-transparent hover:border-2 hover:border-white hover:text-white">Play Again</button>
+                    <h1 class="text-8xl text-white font-extrabold">Score : <span id="result">0</span></h1>
+                    <button onclick="playAgain()" class="bg-white text-black h-[96px] w-[250px] text-5xl rounded-lg hover:bg-transparent hover:border-2 hover:border-white hover:text-white">Play Again</button>
                     <p class="text-white text-2xl font-thin">Practice will make you Pro</p>
                 </div>
             </div>
